@@ -9,9 +9,7 @@ public class QuartzDemoMain {
 	public static void main(String[] args) {
 		try {
 			String jobName = HelloJob.class.getName() + UUID.randomUUID();
-			String jobName2 = HelloJob.class.getName() + UUID.randomUUID();
 			QuartzUtils.addJob(jobName, HelloJob.class, "0/5 * * * * ?");
-			QuartzUtils.addJob(jobName2, HelloJob.class, "0/2 * * * * ?");
 			
 			Thread.sleep(10 * 1000);
 			
